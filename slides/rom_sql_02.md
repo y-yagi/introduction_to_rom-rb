@@ -1,4 +1,0 @@
-
-## rom-sql
-
-* rom-sqlについて
