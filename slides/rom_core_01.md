@@ -1,3 +1,3 @@
 
-## romのcore部分について
+## romのcoreについて
 
