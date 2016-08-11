@@ -1,14 +1,9 @@
 
 ## Relations
 
+`rom-http` adapterを使用したい場合は
+
 ```ruby
-class Users < ROM::Relation[:sql]
+class Users < ROM::Relation[:http]
 end
 ```
-
-上記は
-
-* adapterに`rom-sql`を使用する
-* `users`という名前の`dataset`にアクセスする為のクラス
-
-という事を宣言している

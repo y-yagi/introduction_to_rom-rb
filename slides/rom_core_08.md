@@ -1,24 +1,18 @@
 
 ## Schemas
 
-* primary keyやforeign keyも使える
+* rom共通で使用出来る型は`ROM::Types` namespaceで提供されている
+* RDBMS固有の型等は別のnamespace(ex: `ROM::SQL::Types::PG`)で提供されている
 
 ```ruby
-class Users < ROM::Relation[:http]
-  schema do
-    attribute :id, Types::Int
-    attribute :name, Types::String
-    attribute :age, Types::Int
+require 'rom-sql'
+require 'rom/sql/types/pg'
 
-    primary_key :id
-  end
-end
-```
-
-```ruby
-class Posts < ROM::Relation[:http]
+class Users < ROM::Relation[:sql]
   schema do
-    attribute :user_id, Types::ForeignKey(:users)
+    attribute :meta, Types::PG::JSON
+    attribute :tags, Types::PG::Array
+    attribute :info, Types::PG::Hash
   end
 end
 ```

@@ -1,18 +1,5 @@
 
 ## Schemas
 
-* rom共通で使用出来る型は`ROM::Types` namespaceで提供されている
-* RDBMS固有の型等は別のnamespace(ex: `ROM::SQL::Types::PG`)で提供されている
-
-```ruby
-require 'rom-sql'
-require 'rom/sql/types/pg'
-
-class Users < ROM::Relation[:sql]
-  schema do
-    attribute :meta, Types::PG::JSON
-    attribute :tags, Types::PG::Array
-    attribute :info, Types::PG::Hash
-  end
-end
-```
+* 型定義の為の処理には[dry\-types](http://dry-rb.org/gems/dry-types/)を使用している
+ * `dry-types`については前回の資料([Introduction\_to\_dry\-rb](https://y-yagi.github.io/introduction_to_dry-rb/#/))参照

@@ -1,4 +1,4 @@
 
 ## Introduction to ROM
 
-Ginzarb 第xx回 / @y-yagi
+Ginzarb 第38回 / @y-yagi

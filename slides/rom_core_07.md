@@ -1,8 +1,7 @@
 
 ## Schemas
 
-* attributeの名前と型を定義する為の仕組み
-* schemaはRelationクラスの中に定義する
+* primary keyやforeign keyも使える
 
 ```ruby
 class Users < ROM::Relation[:http]
@@ -10,7 +9,16 @@ class Users < ROM::Relation[:http]
     attribute :id, Types::Int
     attribute :name, Types::String
     attribute :age, Types::Int
+
+    primary_key :id
   end
 end
 ```
 
+```ruby
+class Posts < ROM::Relation[:http]
+  schema do
+    attribute :user_id, Types::ForeignKey(:users)
+  end
+end
+```
