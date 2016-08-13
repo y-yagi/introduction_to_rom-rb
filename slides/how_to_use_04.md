@@ -1,10 +1,12 @@
 
 ## 使い方(`rom-sql`)
 
+次に`Relation`を定義、及び登録
+
 ```ruby
 conf = ROM::Configuration.new(:sql, 'sqlite::memory')
 
-# `Relation`
+# Relation
 class Users < ROM::Relation[:sql]
   schema(infer: true)
 

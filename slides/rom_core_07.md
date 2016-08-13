@@ -6,9 +6,9 @@
 ```ruby
 class Users < ROM::Relation[:http]
   schema do
-    attribute :id, Types::Int
-    attribute :name, Types::String
-    attribute :age, Types::Int
+    attribute :id, ROM::Types::Int
+    attribute :name, ROM::Types::String
+    attribute :age, ROM::Types::Int
 
     primary_key :id
   end

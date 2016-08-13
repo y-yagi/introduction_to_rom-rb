@@ -10,9 +10,9 @@ require 'rom/sql/types/pg'
 
 class Users < ROM::Relation[:sql]
   schema do
-    attribute :meta, Types::PG::JSON
-    attribute :tags, Types::PG::Array
-    attribute :info, Types::PG::Hash
+    attribute :meta, ROM::SQL::Types::PG::JSON
+    attribute :tags, ROM::SQL::Types::PG::Array
+    attribute :info, ROM::SQL::Types::PG::Hash
   end
 end
 ```

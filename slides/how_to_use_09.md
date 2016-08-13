@@ -1,10 +1,11 @@
 
-## rom-repository
+## 使い方
 
-* 特定のclassにマッピングしたい場合、`as`メソッドを使用する
-
+* デフォルトではdatastoreから取得したデータは`ROM::Struct`クラスにマッピングされる
+* 当然任意のクラスにデータをマッピングする事も可能
 
 ```ruby
+
 class User
   attr_reader :id, :name, :email
 
@@ -15,5 +16,5 @@ end
 
 user_repo.users.where(name: 'Malcolm').as(User).to_a
 #=> [#<User:0x00558d6b762f20 @email="malcolm@example.com", @id=1, @name="Malcolm]
-# `User`クラスのArrayになる
 ```
+
