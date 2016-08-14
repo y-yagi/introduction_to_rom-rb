@@ -18,7 +18,7 @@ end
 ```ruby
 class Posts < ROM::Relation[:http]
   schema do
-    attribute :user_id, Types::ForeignKey(:users)
+    attribute :user_id, ROM::Types::ForeignKey(:users)
   end
 end
 ```

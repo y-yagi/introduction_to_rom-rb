@@ -4,7 +4,7 @@
 `Repository`を使用して、データの操作を行う
 
 ```ruby
-# ROM::ContainerをRepositoryのインスタンス生成時に指定する
+# ROM::Containerを使用してRepositoryを作成
 user_repo = UserRepo.new(rom)
 
 user = user_repo.create(name: 'Jane', email: 'jane@doe.org')

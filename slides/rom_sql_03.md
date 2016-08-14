@@ -1,11 +1,17 @@
 
 ## rom-sql
 
-* `ROM::Container`クラスでDBへの接続情報を管理する
+* associationsが使える
+  * `belongs_to`、`has_many`、`has_many-through`、`has_one`、`has_one-through`
 
 ```ruby
-rom = ROM.container(:sql, 'sqlite::memory')
+class Users < ROM::Relation[:sql]
+  schema(infer: true) do
+    associations do
+      has_many :tasks
+      has_one :account
+    end
+  end
+end
 ```
 
-* `.container`メソッドの第二引数に接続先情報を指定する
-  * PostgreSQLの場合`postgres://localhost/rom_sql`、MySQLの場合`mysql2://root@localhost/rom_sql`

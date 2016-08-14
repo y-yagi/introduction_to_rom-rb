@@ -7,7 +7,7 @@
 require 'rom-repository'
 require 'rom-sql'
 
-# `ROM::Configuration`を使用して接続先を指定
+# ROM::Configurationで接続先を指定
 conf = ROM::Configuration.new(:sql, 'sqlite::memory')
 
 migration = conf.gateways[:default].migration do
@@ -23,3 +23,4 @@ end
 # migration実行
 migration.apply(conf.gateways[:default].connection, :up)
 ```
+

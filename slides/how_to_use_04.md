@@ -1,7 +1,7 @@
 
 ## 使い方(`rom-sql`)
 
-次に`Relation`を定義、及び登録
+次に`Relation`クラスを作成
 
 ```ruby
 conf = ROM::Configuration.new(:sql, 'sqlite::memory')
@@ -15,9 +15,9 @@ class Users < ROM::Relation[:sql]
   end
 end
 
-# `ROM::Configuration`に`Relation`を登録
+# ROM::ConfigurationにRelationを登録
 conf.register_relation(Users)
 
-# `ROM::Configuration`を使用して`ROM::Container`を作成する
+# ROM::Configurationを使用してROM::Containerを作成する
 rom = ROM.container(conf)
 ```
