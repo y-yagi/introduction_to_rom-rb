@@ -5,7 +5,6 @@
 * 当然任意のクラスにデータをマッピングする事も可能
 
 ```ruby
-
 class User
   attr_reader :id, :name, :email
 

@@ -1,7 +1,7 @@
 
 ## Relations
 
-`rom-http` adapterを使用したい場合は
+`rom-http` adapterを使用する場合
 
 ```ruby
 class Users < ROM::Relation[:http]
