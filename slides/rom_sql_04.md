@@ -4,7 +4,6 @@
 * データの取得は`where`で
 
 ```ruby
-
 require 'rom-sql'
 
 class Users < ROM::Relation[:sql]
