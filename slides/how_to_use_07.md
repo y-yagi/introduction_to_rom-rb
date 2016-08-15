@@ -1,7 +1,7 @@
 
 ## 使い方(`rom-sql`)
 
-ここまでのコードまとめ
+ここまでのコード[まとめ](https://gist.github.com/y-yagi/d13281b7be1ed676863c5e8617c6fdd1)
 
 ```ruby
 require 'rom-repository'

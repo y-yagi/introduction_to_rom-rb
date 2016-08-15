@@ -1,7 +1,7 @@
 
 ## `Command`
 
-`rom-sql`の`Create Command`
+`rom-sql`の[`Create Command`](https://github.com/rom-rb/rom-sql/blob/master/lib/rom/sql/commands/create.rb)
 
 ```ruby
 require 'rom/sql/commands/error_wrapper'
