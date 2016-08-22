@@ -1,7 +1,7 @@
 
 ## 使い方(`rom-sql`)
 
-最後に`Repository`クラスを作成
+データの操作を行う為の`Repository`クラスを作成
 
 ```ruby
 class UserRepo < ROM::Repository[:users]
