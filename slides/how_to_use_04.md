@@ -1,7 +1,7 @@
 
 ## 使い方(`rom-sql`)
 
-次に`Relation`クラスを作成
+datastoreに対する処理を定義する為の`Relation`クラスを作成
 
 ```ruby
 conf = ROM::Configuration.new(:sql, 'sqlite::memory')
