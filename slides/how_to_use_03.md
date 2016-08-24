@@ -19,8 +19,10 @@ migration = conf.gateways[:default].migration do
     end
   end
 end
+```
 
+
+```ruby
 # migration実行
 migration.apply(conf.gateways[:default].connection, :up)
 ```
-
